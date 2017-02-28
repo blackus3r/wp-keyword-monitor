@@ -1,0 +1,23 @@
+.keyword-result-up{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 11px solid green;
+    display: inline-block;
+}
+
+.keyword-result-down{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 11px solid red;
+    display: inline-block;
+}
+
+.danger{
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+    color:#fff !important;
+}
