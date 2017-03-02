@@ -62,14 +62,21 @@ class Settings
                     <?php _e('Need help? You can find a tutorial <a href="https://dazdaztech.wordpress.com/2013/08/03/using-google-custom-search-api-from-the-command-line/">here</a>.', WP_KEYWORD_MONITOR_TEXT_DOMAIN) ?>
                 </p>
                 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28WZAXQDXYZ5A" class="button"><?php _e("Donate", WP_KEYWORD_MONITOR_TEXT_DOMAIN);?></a>
+                <a target="_blank" href="https://wordpress.org/support/plugin/wp-keyword-monitor" class="button"><?php _e("Support Forum", WP_KEYWORD_MONITOR_TEXT_DOMAIN);?></a>
+                <a target="_blank" href="https://github.com/blackus3r/wp-keyword-monitor/" class="button"><?php _e("Github", WP_KEYWORD_MONITOR_TEXT_DOMAIN);?></a>
             </div>
 
             <div style="margin-top:20px; float: left; width:40%;" class="wrap">
                 <h1><?php _e("Import", WP_KEYWORD_MONITOR_TEXT_DOMAIN); ?></h1>
 
-                <form method="post" action="<?php echo admin_url( 'admin.php' ); ?>" onsubmit="return confirm('<?php echo __(); ?>');">
+                <form method="post" action="<?php echo admin_url( 'admin.php' ); ?>">
                     <button name="action" value="importKeywordsFromYoastSeo" class="button button-primary"><?php _e("Import Keywords from Yoast SEO"); ?></button>
                 </form>
+            </div>
+
+            <div style="margin-top:20px; float: left; width:40%;" class="wrap">
+                <h1><?php _e("Other Plugins from Me", WP_KEYWORD_MONITOR_TEXT_DOMAIN); ?></h1>
+                <a target="_blank" href="https://de.wordpress.org/plugins/post-worktime-logger/" class="button"><?php _e("Post Worktime Logger", WP_KEYWORD_MONITOR_TEXT_DOMAIN);?></a>
             </div>
 
         </div>
