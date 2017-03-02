@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP Keyword Monitor v1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-03-02 18:46:37+0000\n"
+"PO-Revision-Date: 2017-03-02 18:53:45+0000\n"
 "Last-Translator: admin <admin@localhost.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -155,37 +155,37 @@ msgstr "Suchtiefe"
 msgid "Check interval"
 msgstr "Überprüfungsintervall"
 
-#: page/settingspage.php:169
+#: page/settingspage.php:177
 #@ wp-keyword-monitor
 msgid "Auto mode"
 msgstr "Automatik-Modus"
 
-#: page/settingspage.php:226
+#: page/settingspage.php:234
 #@ wp-keyword-monitor
 msgid "You can get your Google API-Key <a href=\"https://console.developers.google.com/apis/credentials\">here</a>."
 msgstr "Deinen Google API-Key bekommst du <a href=\"https://console.developers.google.com/apis/credentials\">hier</a>."
 
-#: page/settingspage.php:238
+#: page/settingspage.php:246
 #@ wp-keyword-monitor
 msgid "You can get your Google cx  <a href=\"https://cse.google.com/cse/all\">here</a>."
 msgstr "Deinen Google cx bekommst du <a href=\"https://cse.google.com/cse/all\">hier</a>."
 
-#: page/settingspage.php:250
+#: page/settingspage.php:258
 #@ wp-keyword-monitor
 msgid "Without www or http, like derpade.de."
 msgstr "Ohne www oder http, wie derpade.de"
 
-#: page/settingspage.php:262
+#: page/settingspage.php:270
 #@ wp-keyword-monitor
 msgid "How many sites should we check for your domain? Please be careful, because this reacts like a multiplicator."
 msgstr "Wie viele Seiten sollen überprüft werden für deine Domain? Bitte sei vorsichtig, dieser Wert agiert als Multiplikator. "
 
-#: page/settingspage.php:274
+#: page/settingspage.php:282
 #@ wp-keyword-monitor
 msgid "The check interval in days. A good value is 3 days."
 msgstr "Der Überprüfungsintervall in Tagen. Ein guter Wert ist 3 Tage. "
 
-#: page/settingspage.php:287
+#: page/settingspage.php:307
 #@ wp-keyword-monitor
 msgid "Enables or disables the auto mode."
 msgstr "Aktiviert oder deaktiviert den Automatik-Modus."
@@ -245,4 +245,14 @@ msgstr "Andere Plugins von mir"
 #@ wp-keyword-monitor
 msgid "Post Worktime Logger"
 msgstr "Post Worktime Logger"
+
+#: page/settingspage.php:169
+#@ wp-keyword-monitor
+msgid "Maximum API-calls per day"
+msgstr "Maximale Anzahl von API-Aufrufen am Tag"
+
+#: page/settingspage.php:294
+#@ wp-keyword-monitor
+msgid "Defines the maximum of API-calls that we can use per day. This is helpful if you share the google acount with other blogs."
+msgstr "Definiert das Maximum an API-Aufrufen, die pro Tag genutzt werden dürfen. Dies ist hilfreich, wenn du den selben Google Account mit anderen Blogs teilst."
 

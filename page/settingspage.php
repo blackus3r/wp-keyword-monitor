@@ -165,6 +165,14 @@ class Settings
         );
 
         add_settings_field(
+            'maxApiCallsPerDay',
+            __('Maximum API-calls per day', WP_KEYWORD_MONITOR_TEXT_DOMAIN),
+            array( $this, 'maxApiCallsPerDayCallback'),
+            'wp-keyword-monitor-settings',
+            'general'
+        );
+
+        add_settings_field(
             'autoMode',
             __('Auto mode', WP_KEYWORD_MONITOR_TEXT_DOMAIN),
             array( $this, 'autoModeCallback'),
@@ -211,6 +219,11 @@ class Settings
         if( isset( $_input['searchDepth'] ) )
         {
             $newInput['searchDepth'] = sanitize_text_field( wp_unslash( $_input['searchDepth']));
+        }
+
+        if( isset( $_input['maxApiCallsPerDay'] ) )
+        {
+            $newInput['maxApiCallsPerDay'] = sanitize_text_field( wp_unslash( $_input['maxApiCallsPerDay']));
         }
 
         return $newInput;
@@ -272,6 +285,18 @@ class Settings
         <input type="number" id="checkInterval" name="<?php echo WP_KEYWORD_MONITOR_OPTIONS ?>[checkInterval]" value="<?php echo $value ?>"/>
         <p class="description">
             <?php _e("The check interval in days. A good value is 3 days.", WP_KEYWORD_MONITOR_TEXT_DOMAIN)?>
+        </p>
+        <?php
+    }
+
+    public function maxApiCallsPerDayCallback()
+    {
+        if (isset($this->options["maxApiCallsPerDay"])) $value = $this->options["maxApiCallsPerDay"];
+        else $value = 100;
+        ?>
+        <input type="number" id="checkInterval" name="<?php echo WP_KEYWORD_MONITOR_OPTIONS ?>[maxApiCallsPerDay]" value="<?php echo $value ?>"/>
+        <p class="description">
+            <?php _e("Defines the maximum of API-calls that we can use per day. This is helpful if you share the google acount with other blogs.", WP_KEYWORD_MONITOR_TEXT_DOMAIN)?>
         </p>
         <?php
     }
