@@ -44,5 +44,14 @@ You can donate to this project via PayPal by visiting this page: https://www.pay
 
 ##Changelog
 
+###1.0.2
+* Fixed behaviour when limiting the maximum api calls.
+
+###1.0.1
+* Added some links to support forum and other plugins from me.
+* Added support to define the max API-calls per day
+* Fixed import button
+* Fixed add to chart button
+
 ###1.0.0
 * First Version
