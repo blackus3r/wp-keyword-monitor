@@ -74,6 +74,7 @@ class WpKeywordMonitor
         $keywordResultQuery = new \WpKeywordMonitor\Query\KeywordResultQuery($_wpdb);
         $options = get_option(WP_KEYWORD_MONITOR_OPTIONS);
         $rankChecker = new RankChecker($options["apiKey"], $options["cx"], $options["domain"]);
+
         if (isset($options["maxApiCallsPerDay"])) $maxApiCallsPerDay = $options["maxApiCallsPerDay"];
         else $maxApiCallsPerDay = 100;
 
@@ -82,7 +83,11 @@ class WpKeywordMonitor
             if (isset($options["checkInterval"])) $checkInterval = $options["checkInterval"];
             else $checkInterval = 1;
 
-            $usedApiCalls = 0;
+            $usedApiCallsWithDate = get_option(WP_KEYWORD_MONITOR_USED_CALLS, 0);
+
+            if (isset($usedApiCallsWithDate[date("Y-m-d")])) $usedApiCalls = $usedApiCallsWithDate[date("Y-m-d")];
+            else $usedApiCalls = 0;
+
             foreach ($keywordQuery->getKeywordsWhichNeedACheck($checkInterval, 10) as $keyword)
             {
                 if ($usedApiCalls<$maxApiCallsPerDay)
@@ -93,12 +98,14 @@ class WpKeywordMonitor
                         $keywordResultQuery->addKeywordResultToKeyword($keywordResult);
                         update_option(WP_KEYWORD_MONITOR_ERROR, null);
                     }
-                    else update_option(WP_KEYWORD_MONITOR_ERROR, array("error" => $keywordResult));
+                    else if ($keywordResult!==null) update_option(WP_KEYWORD_MONITOR_ERROR, array("error" => $keywordResult));
 
                     $usedApiCalls++;
                 }
                 else break;
             }
+
+            update_option(WP_KEYWORD_MONITOR_USED_CALLS, array(date("Y-m-d")=>$usedApiCalls));
         }
     }
 }

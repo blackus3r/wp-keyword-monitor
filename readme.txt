@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: seo, keyword monitor, ranking, rank checker, google, keywords
 Requires at least: 2.3.1
 Tested up to: 4.7
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.html
 
@@ -44,6 +44,9 @@ Please be careful, this plugin is new and in beta status.
 You can donate to this project via PayPal by visiting this page: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28WZAXQDXYZ5A
 
 == Changelog ==
+
+= 1.0.2 =
+* Fixed behaviour when limiting the maximum api calls.
 
 = 1.0.1 =
 * Added some links to support forum and other plugins from me.

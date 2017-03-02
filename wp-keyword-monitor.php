@@ -3,7 +3,7 @@
 Plugin Name: WP Keyword Monitor
 Plugin URI: https://wordpress.org/plugins/wp-keyword-monitor
 Description: WP Keyword Monitor (KeyMon) is a powerful SEO Tool to track your keyword rankings in google serps.
-Version: 1.0.1
+Version: 1.0.2
 Author: Patrick Hausmann
 Author URI: https://profiles.wordpress.org/filme-blog/
 License: GPLv3
@@ -26,6 +26,7 @@ const WP_KEYWORD_MONITOR_KEYWORDS = "wp-keyword-monitor-keywords";
 
 const WP_KEYWORD_MONITOR_OPTIONS = "wp-keyword-monitor-options";
 const WP_KEYWORD_MONITOR_ERROR = "wp-keyword-monitor-error";
+const WP_KEYWORD_MONITOR_USED_CALLS = "wp-keyword-monitor-used-calls";
 const WP_KEYWORD_MONITOR_KEYWORD_CHARTS= "wp-keyword-monitor-keyword-charts";
 const WP_KEYWORD_MONITOR_TEXT_DOMAIN= "wp-keyword-monitor";
 const WP_KEYWORD_MONITOR = "wp-keyword-monitor";
