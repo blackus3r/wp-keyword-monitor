@@ -38,6 +38,15 @@ class Keyword
         return __("Not checked yet", WP_KEYWORD_MONITOR_TEXT_DOMAIN);
     }
 
+    function getLastResultDate()
+    {
+        if (count($this->keywordResults)!=0)
+        {
+            return date("Y-m-d", strtotime($this->keywordResults[count($this->keywordResults)-1]->dateTime));
+        }
+        else return null;
+    }
+
     function getPreviousResultDateTime()
     {
         if (count($this->keywordResults)>1)

@@ -80,7 +80,7 @@ class KeywordQuery
         $count = 0;
         foreach ($this->getAllKeywords() as $keyword)
         {
-            if ($keyword->getLastResultDateTime() < date("Y-m-d", current_time("timestamp")-60*60*24*$_checkInterval) ||
+            if ($keyword->getLastResultDate() <= date("Y-m-d", current_time("timestamp")-60*60*24*$_checkInterval) ||
                 count($keyword->keywordResults)===0)
             {
                 $count++;

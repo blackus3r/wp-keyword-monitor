@@ -45,6 +45,15 @@ You can donate to this project via PayPal by visiting this page: https://www.pay
 
 == Changelog ==
 
+= 1.0.3 =
+* Fixed check interval calculation.
+* Fixed copyright in files.
+* Fixed limit daily api calls.
+* Fixed error handling, if daily limit exceeded.
+* Refactored rank checker, to be smarter.
+* Refactored everything, that uses date() without the current timezone information.
+* Added support to print the current version in settingspage.
+
 = 1.0.2 =
 * Fixed behaviour when limiting the maximum api calls.
 

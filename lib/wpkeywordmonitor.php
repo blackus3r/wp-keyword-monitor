@@ -91,6 +91,7 @@ class WpKeywordMonitor
 
             foreach ($keywordQuery->getKeywordsWhichNeedACheck($checkInterval, 10) as $keyword)
             {
+                echo $keyword->keyword."<br>";
                 if (($usedApiCalls+$rankChecker->usedApiCalls)<=$maxApiCallsPerDay)
                 {
                     $keywordResult = $rankChecker->calculateKeywordResultOfKeyword($keyword, $options["searchDepth"]);
@@ -102,7 +103,7 @@ class WpKeywordMonitor
                     else update_option(WP_KEYWORD_MONITOR_ERROR, array("error" => $keywordResult));
 
                 }
-                else break;
+                //else break;
             }
 
             update_option(WP_KEYWORD_MONITOR_USED_CALLS, array($today=>$usedApiCalls+$rankChecker->usedApiCalls));
