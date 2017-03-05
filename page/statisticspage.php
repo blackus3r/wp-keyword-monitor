@@ -116,7 +116,7 @@ class Statistics
     {
         global $wpdb;
         WpKeywordMonitor::checkRanks($wpdb, true);
-        //wp_redirect($_SERVER['HTTP_REFERER']);
+        wp_redirect($_SERVER['HTTP_REFERER']);
         exit();
     }
 
