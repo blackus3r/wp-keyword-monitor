@@ -4,7 +4,7 @@
  *
  * @file
  * @version
- * @copyright 2017 CN-Consult GmbH
+ * @copyright 2017 phausmann.de
  * @author Patrick Hausmann <privat@patrick-designs.de>
  */
 

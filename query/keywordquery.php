@@ -4,7 +4,7 @@
  *
  * @file
  * @version
- * @copyright 2017 CN-Consult GmbH
+ * @copyright 2017 phausmann.de
  * @author Patrick Hausmann <privat@patrick-designs.de>
  */
 
@@ -80,7 +80,8 @@ class KeywordQuery
         $count = 0;
         foreach ($this->getAllKeywords() as $keyword)
         {
-            if ($keyword->getLastResultDateTime()<date("Y-m-d", time()+60*60*24*$_checkInterval) || count($keyword->keywordResults)===0)
+            if ($keyword->getLastResultDateTime() < date("Y-m-d", current_time("timestamp")-60*60*24*$_checkInterval) ||
+                count($keyword->keywordResults)===0)
             {
                 $count++;
                 $keywords[] = $keyword;
@@ -110,7 +111,7 @@ class KeywordQuery
 				INSERT INTO ".$this->fullQualifiedTableName."
 				( keyword, created_on )
 				VALUES ( %s, %s)",
-                $_keyword, date("Y-m-d", time())) );
+                $_keyword, date("Y-m-d", current_time("timestamp"))) );
         }
     }
 }

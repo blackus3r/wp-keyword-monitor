@@ -42,6 +42,7 @@ class Settings
         <div>
             <div style="float: left; width:50%;" class="wrap">
                 <h1><?php _e("Settings", WP_KEYWORD_MONITOR_TEXT_DOMAIN); ?></h1>
+                <p class="description"><?php _e("Current version", WP_KEYWORD_MONITOR_TEXT_DOMAIN); echo ": ".WP_KEYWORD_MONITOR_VERSION; ?></p>
 
                 <p class="description">
                     <?php _e("Since 2008, Google does not longer allows us to parse the results page content, so we have to use the custom search API.", WP_KEYWORD_MONITOR_TEXT_DOMAIN) ?>

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Keyword Monitor v1.0.0\n"
+"Project-Id-Version: WP Keyword Monitor v1.0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-03-02 18:53:45+0000\n"
+"PO-Revision-Date: 2017-03-05 11:29:17+0000\n"
 "Last-Translator: admin <admin@localhost.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -36,37 +36,37 @@ msgstr "Kein Rang verfügbar"
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: page/settingspage.php:54
+#: page/settingspage.php:55
 #@ default
 msgid "Save"
 msgstr ""
 
-#: page/settingspage.php:73
+#: page/settingspage.php:74
 #@ default
 msgid "Import Keywords from Yoast SEO"
 msgstr ""
 
-#: page/settingspage.php:47
+#: page/settingspage.php:48
 #@ wp-keyword-monitor
 msgid "Since 2008, Google does not longer allows us to parse the results page content, so we have to use the custom search API."
 msgstr "Seit 2008 erlaubt uns Google nicht mehr, den Seiteninhalt zu analysieren, demnach müssen wir das benutzerdefinierte Such-API verwenden."
 
-#: page/settingspage.php:122
+#: page/settingspage.php:123
 #@ wp-keyword-monitor
 msgid "General"
 msgstr "Allgemein"
 
-#: page/settingspage.php:129
+#: page/settingspage.php:130
 #@ wp-keyword-monitor
 msgid "API-Key"
 msgstr "API-Schlüssel"
 
-#: page/settingspage.php:137
+#: page/settingspage.php:138
 #@ wp-keyword-monitor
 msgid "CX"
 msgstr "CX"
 
-#: page/settingspage.php:145
+#: page/settingspage.php:146
 #@ wp-keyword-monitor
 msgid "Domain"
 msgstr "Domain"
@@ -125,67 +125,67 @@ msgstr ""
 msgid "No rank found"
 msgstr "Kein Rang gefunden"
 
-#: page/settingspage.php:60
+#: page/settingspage.php:61
 #@ wp-keyword-monitor
 msgid "Tutorial and Help"
 msgstr "Tutorial und Hilfe"
 
-#: page/settingspage.php:62
+#: page/settingspage.php:63
 #@ wp-keyword-monitor
 msgid "Need help? You can find a tutorial <a href=\"https://dazdaztech.wordpress.com/2013/08/03/using-google-custom-search-api-from-the-command-line/\">here</a>."
 msgstr "Brauchst du Hilfe? Ein Tutorial findest du <a href=\"https://dazdaztech.wordpress.com/2013/08/03/using-google-custom-search-api-from-the-command-line/\">hier</a>."
 
-#: page/settingspage.php:64
+#: page/settingspage.php:65
 #@ wp-keyword-monitor
 msgid "Donate"
 msgstr "Spenden"
 
-#: page/settingspage.php:70
+#: page/settingspage.php:71
 #@ wp-keyword-monitor
 msgid "Import"
 msgstr "Importieren"
 
-#: page/settingspage.php:153
+#: page/settingspage.php:154
 #@ wp-keyword-monitor
 msgid "Search depth"
 msgstr "Suchtiefe"
 
-#: page/settingspage.php:161
+#: page/settingspage.php:162
 #@ wp-keyword-monitor
 msgid "Check interval"
 msgstr "Überprüfungsintervall"
 
-#: page/settingspage.php:177
+#: page/settingspage.php:178
 #@ wp-keyword-monitor
 msgid "Auto mode"
 msgstr "Automatik-Modus"
 
-#: page/settingspage.php:234
+#: page/settingspage.php:240
 #@ wp-keyword-monitor
 msgid "You can get your Google API-Key <a href=\"https://console.developers.google.com/apis/credentials\">here</a>."
 msgstr "Deinen Google API-Key bekommst du <a href=\"https://console.developers.google.com/apis/credentials\">hier</a>."
 
-#: page/settingspage.php:246
+#: page/settingspage.php:252
 #@ wp-keyword-monitor
 msgid "You can get your Google cx  <a href=\"https://cse.google.com/cse/all\">here</a>."
 msgstr "Deinen Google cx bekommst du <a href=\"https://cse.google.com/cse/all\">hier</a>."
 
-#: page/settingspage.php:258
+#: page/settingspage.php:264
 #@ wp-keyword-monitor
 msgid "Without www or http, like derpade.de."
 msgstr "Ohne www oder http, wie derpade.de"
 
-#: page/settingspage.php:270
+#: page/settingspage.php:276
 #@ wp-keyword-monitor
 msgid "How many sites should we check for your domain? Please be careful, because this reacts like a multiplicator."
 msgstr "Wie viele Seiten sollen überprüft werden für deine Domain? Bitte sei vorsichtig, dieser Wert agiert als Multiplikator. "
 
-#: page/settingspage.php:282
+#: page/settingspage.php:288
 #@ wp-keyword-monitor
 msgid "The check interval in days. A good value is 3 days."
 msgstr "Der Überprüfungsintervall in Tagen. Ein guter Wert ist 3 Tage. "
 
-#: page/settingspage.php:307
+#: page/settingspage.php:313
 #@ wp-keyword-monitor
 msgid "Enables or disables the auto mode."
 msgstr "Aktiviert oder deaktiviert den Automatik-Modus."
@@ -226,33 +226,38 @@ msgstr "Gesamtanzahl Suchbegriffe: %s"
 msgid "KeyMon"
 msgstr "KeyMon"
 
-#: page/settingspage.php:65
+#: page/settingspage.php:66
 #@ wp-keyword-monitor
 msgid "Support Forum"
 msgstr "Support Forum"
 
-#: page/settingspage.php:66
+#: page/settingspage.php:67
 #@ wp-keyword-monitor
 msgid "Github"
 msgstr "Github"
 
-#: page/settingspage.php:78
+#: page/settingspage.php:79
 #@ wp-keyword-monitor
 msgid "Other Plugins from Me"
 msgstr "Andere Plugins von mir"
 
-#: page/settingspage.php:79
+#: page/settingspage.php:80
 #@ wp-keyword-monitor
 msgid "Post Worktime Logger"
 msgstr "Post Worktime Logger"
 
-#: page/settingspage.php:169
+#: page/settingspage.php:170
 #@ wp-keyword-monitor
 msgid "Maximum API-calls per day"
 msgstr "Maximale Anzahl von API-Aufrufen am Tag"
 
-#: page/settingspage.php:294
+#: page/settingspage.php:300
 #@ wp-keyword-monitor
 msgid "Defines the maximum of API-calls that we can use per day. This is helpful if you share the google acount with other blogs."
 msgstr "Definiert das Maximum an API-Aufrufen, die pro Tag genutzt werden dürfen. Dies ist hilfreich, wenn du den selben Google Account mit anderen Blogs teilst."
+
+#: page/settingspage.php:45
+#@ wp-keyword-monitor
+msgid "Current version"
+msgstr "Aktuelle Version"
 

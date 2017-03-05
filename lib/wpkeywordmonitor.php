@@ -4,7 +4,7 @@
  *
  * @file
  * @version
- * @copyright 2017 CN-Consult GmbH
+ * @copyright 2017 phausmann.de
  * @author Patrick Hausmann <privat@patrick-designs.de>
  */
 
@@ -78,19 +78,20 @@ class WpKeywordMonitor
         if (isset($options["maxApiCallsPerDay"])) $maxApiCallsPerDay = $options["maxApiCallsPerDay"];
         else $maxApiCallsPerDay = 100;
 
-        if ($options["autoMode"] || $_direct)
+        if ((isset($options["autoMode"]) && $options["autoMode"]) || $_direct)
         {
             if (isset($options["checkInterval"])) $checkInterval = $options["checkInterval"];
             else $checkInterval = 1;
 
             $usedApiCallsWithDate = get_option(WP_KEYWORD_MONITOR_USED_CALLS, 0);
 
-            if (isset($usedApiCallsWithDate[date("Y-m-d")])) $usedApiCalls = $usedApiCallsWithDate[date("Y-m-d")];
+            $today = date("Y-m-d", current_time("timestamp"));
+            if (isset($usedApiCallsWithDate[$today])) $usedApiCalls = $usedApiCallsWithDate[$today];
             else $usedApiCalls = 0;
 
             foreach ($keywordQuery->getKeywordsWhichNeedACheck($checkInterval, 10) as $keyword)
             {
-                if ($usedApiCalls<$maxApiCallsPerDay)
+                if (($usedApiCalls+$rankChecker->usedApiCalls)<=$maxApiCallsPerDay)
                 {
                     $keywordResult = $rankChecker->calculateKeywordResultOfKeyword($keyword, $options["searchDepth"]);
                     if ($keywordResult instanceof KeywordResult)
@@ -98,14 +99,13 @@ class WpKeywordMonitor
                         $keywordResultQuery->addKeywordResultToKeyword($keywordResult);
                         update_option(WP_KEYWORD_MONITOR_ERROR, null);
                     }
-                    else if ($keywordResult!==null) update_option(WP_KEYWORD_MONITOR_ERROR, array("error" => $keywordResult));
+                    else update_option(WP_KEYWORD_MONITOR_ERROR, array("error" => $keywordResult));
 
-                    $usedApiCalls++;
                 }
                 else break;
             }
 
-            update_option(WP_KEYWORD_MONITOR_USED_CALLS, array(date("Y-m-d")=>$usedApiCalls));
+            update_option(WP_KEYWORD_MONITOR_USED_CALLS, array($today=>$usedApiCalls+$rankChecker->usedApiCalls));
         }
     }
 }
