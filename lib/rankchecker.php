@@ -49,21 +49,22 @@ class RankChecker
                 curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
 
                 $response = curl_exec($curl);
-                $this->usedApiCalls++;
                 $jsonDecoded = json_decode($response);
 
                 if ($jsonDecoded)
                 {
                     if (isset($jsonDecoded->items))
                     {
+                        $this->usedApiCalls++;
                         $position = 1;
                         foreach ($jsonDecoded->items as $entry)
                         {
-                            if (strpos($entry->formattedUrl, $this->domain) !== false)
+                            if ($found===false && strpos($entry->formattedUrl, $this->domain) !== false)
                             {
                                 $found = true;
+                                break;
                             }
-                            else $position++;
+                            else if ($found===true) $position++;
                         }
                     }
                     else if (isset($jsonDecoded->error) && $jsonDecoded->error->errors[0]->reason == "dailyLimitExceeded")
@@ -80,6 +81,7 @@ class RankChecker
             else break;
         }
 
-        return new KeywordResult($_keyword->id, $position);
+        if ($found) return new KeywordResult($_keyword->id, $position);
+        else return new KeywordResult($_keyword->id, 0);
     }
 }

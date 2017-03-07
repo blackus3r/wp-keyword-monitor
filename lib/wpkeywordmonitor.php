@@ -86,12 +86,12 @@ class WpKeywordMonitor
             $usedApiCallsWithDate = get_option(WP_KEYWORD_MONITOR_USED_CALLS, 0);
 
             $today = date("Y-m-d", current_time("timestamp"));
-            if (isset($usedApiCallsWithDate[$today])) $usedApiCalls = $usedApiCallsWithDate[$today];
+            if (isset($usedApiCallsWithDate[$today])) $usedApiCalls = (int)$usedApiCallsWithDate[$today];
             else $usedApiCalls = 0;
 
             foreach ($keywordQuery->getKeywordsWhichNeedACheck($checkInterval, 10) as $keyword)
             {
-                if (($usedApiCalls+$rankChecker->usedApiCalls)<=$maxApiCallsPerDay)
+                if (($usedApiCalls+$rankChecker->usedApiCalls)<$maxApiCallsPerDay)
                 {
                     $keywordResult = $rankChecker->calculateKeywordResultOfKeyword($keyword, $options["searchDepth"]);
                     if ($keywordResult instanceof KeywordResult)
@@ -105,7 +105,7 @@ class WpKeywordMonitor
                 else break;
             }
 
-            update_option(WP_KEYWORD_MONITOR_USED_CALLS, array($today=>$usedApiCalls+$rankChecker->usedApiCalls));
+            update_option(WP_KEYWORD_MONITOR_USED_CALLS, array(date("Y-m-d", current_time("timestamp"))=>(string)($usedApiCalls+$rankChecker->usedApiCalls)));
         }
     }
 }

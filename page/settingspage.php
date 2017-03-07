@@ -294,10 +294,16 @@ class Settings
     {
         if (isset($this->options["maxApiCallsPerDay"])) $value = $this->options["maxApiCallsPerDay"];
         else $value = 100;
+
+            $usedApiCallsWithDate = get_option(WP_KEYWORD_MONITOR_USED_CALLS, 0);
+
+            $today = date("Y-m-d", current_time("timestamp"));
+            if (isset($usedApiCallsWithDate[$today])) $usedApiCalls = (int)$usedApiCallsWithDate[$today];
+            else $usedApiCalls = 0;
         ?>
         <input type="number" id="checkInterval" name="<?php echo WP_KEYWORD_MONITOR_OPTIONS ?>[maxApiCallsPerDay]" value="<?php echo $value ?>"/>
         <p class="description">
-            <?php _e("Defines the maximum of API-calls that we can use per day. This is helpful if you share the google acount with other blogs.", WP_KEYWORD_MONITOR_TEXT_DOMAIN)?>
+            <?php _e("Defines the maximum of API-calls that we can use per day. This is helpful if you share the google acount with other blogs.", WP_KEYWORD_MONITOR_TEXT_DOMAIN)?> <strong><?php _e("Used today:", WP_KEYWORD_MONITOR_TEXT_DOMAIN); ?> <?php echo $usedApiCalls; ?></strong>
         </p>
         <?php
     }

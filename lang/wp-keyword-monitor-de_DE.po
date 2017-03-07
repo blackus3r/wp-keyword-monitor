@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WP Keyword Monitor v1.0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2017-03-05 11:29:17+0000\n"
+"PO-Revision-Date: 2017-03-07 17:51:31+0000\n"
 "Last-Translator: admin <admin@localhost.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,12 +21,12 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #: model/keyword.php:38
-#: model/keyword.php:47
+#: model/keyword.php:56
 #@ wp-keyword-monitor
 msgid "Not checked yet"
 msgstr "Noch nicht überprüft"
 
-#: model/keyword.php:71
+#: model/keyword.php:80
 #@ wp-keyword-monitor
 msgid "No rank available"
 msgstr "Kein Rang verfügbar"
@@ -109,8 +109,8 @@ msgid "Statistics"
 msgstr "Statistiken"
 
 #: page/settingspage.php:44
-#: wp-keyword-monitor.php:52
 #: wp-keyword-monitor.php:53
+#: wp-keyword-monitor.php:54
 #@ wp-keyword-monitor
 msgid "Settings"
 msgstr "Einstellungen"
@@ -120,7 +120,7 @@ msgstr "Einstellungen"
 msgid "Once every 10 minutes"
 msgstr ""
 
-#: model/keyword.php:68
+#: model/keyword.php:77
 #@ wp-keyword-monitor
 msgid "No rank found"
 msgstr "Kein Rang gefunden"
@@ -185,7 +185,7 @@ msgstr "Wie viele Seiten sollen überprüft werden für deine Domain? Bitte sei 
 msgid "The check interval in days. A good value is 3 days."
 msgstr "Der Überprüfungsintervall in Tagen. Ein guter Wert ist 3 Tage. "
 
-#: page/settingspage.php:313
+#: page/settingspage.php:319
 #@ wp-keyword-monitor
 msgid "Enables or disables the auto mode."
 msgstr "Aktiviert oder deaktiviert den Automatik-Modus."
@@ -251,7 +251,7 @@ msgstr "Post Worktime Logger"
 msgid "Maximum API-calls per day"
 msgstr "Maximale Anzahl von API-Aufrufen am Tag"
 
-#: page/settingspage.php:300
+#: page/settingspage.php:306
 #@ wp-keyword-monitor
 msgid "Defines the maximum of API-calls that we can use per day. This is helpful if you share the google acount with other blogs."
 msgstr "Definiert das Maximum an API-Aufrufen, die pro Tag genutzt werden dürfen. Dies ist hilfreich, wenn du den selben Google Account mit anderen Blogs teilst."
@@ -260,4 +260,9 @@ msgstr "Definiert das Maximum an API-Aufrufen, die pro Tag genutzt werden dürfe
 #@ wp-keyword-monitor
 msgid "Current version"
 msgstr "Aktuelle Version"
+
+#: page/settingspage.php:306
+#@ wp-keyword-monitor
+msgid "Used today:"
+msgstr "Heute genutzt:"
 

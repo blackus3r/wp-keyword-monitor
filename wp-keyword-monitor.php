@@ -44,7 +44,8 @@ if (is_admin())
             __("KeyMon", WP_KEYWORD_MONITOR_TEXT_DOMAIN),
             'manage_options',
             "wp-keyword-monitor-statistics",
-            array($statisticsPage, "createPage")
+            array($statisticsPage, "createPage"),
+	        "dashicons-chart-line"
         );
 
         add_submenu_page(

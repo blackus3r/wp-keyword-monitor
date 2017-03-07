@@ -52,6 +52,7 @@ You can donate to this project via PayPal by visiting this page: https://www.pay
 * Refactored rank checker, to be smarter.
 * Refactored everything, that uses date() without the current timezone information.
 * Added support to print the current version in settingspage.
+* Added support to print the used API calls. 
 
 ###1.0.2
 * Fixed behaviour when limiting the maximum api calls.
