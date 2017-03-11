@@ -64,7 +64,7 @@ class RankChecker
                                 $found = true;
                                 break;
                             }
-                            else if ($found===true) $position++;
+                            else if ($found===false) $position++;
                         }
                     }
                     else if (isset($jsonDecoded->error) && $jsonDecoded->error->errors[0]->reason == "dailyLimitExceeded")
