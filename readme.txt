@@ -44,6 +44,9 @@ Please be careful, this plugin is new and in beta status.
 You can donate to this project via PayPal by visiting this page: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28WZAXQDXYZ5A
 
 == Changelog ==
+= 1.0.4 =
+
+* Fixed a bug in the rank checker, which always calculates a ranking with position '1'
 
 = 1.0.3 =
 This version contains many bug fixes. Please upgrade as soon as possible.

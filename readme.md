@@ -44,6 +44,9 @@ You can donate to this project via PayPal by visiting this page: https://www.pay
 
 ##Changelog
 
+###1.0.4
+* Fixed a bug in the rank checker, which always calculates a ranking with position '1'
+
 ###1.0.3
 * Fixed check interval calculation. 
 * Fixed copyright in files.
