@@ -57,6 +57,7 @@ echo "Ignoring github specific & deployment script"
 svn propset svn:ignore "deploy.sh
 README.md
 .git
+.idea
 .gitignore" "$SVNPATH/trunk/"
 
 echo "Moving assets-wp-repo"
