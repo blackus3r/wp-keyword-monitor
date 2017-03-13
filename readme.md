@@ -30,13 +30,13 @@ Please be careful, this plugin is new and in beta status.
 
 ##Screenshots
 
-![statistics](assets/screenshot-1.png)
+![statistics](assets-wp-repo/screenshot-1.png)
 Here you can see the statistics for your keywords.
 
-![table](assets/screenshot-2.png)
+![table](assets-wp-repo/screenshot-2.png)
 All keywords can be found in a table.
 
-![settings](assets/screenshot-3.png)
+![settings](assets-wp-repo/screenshot-3.png)
 These are the settings.
 
 ##Donation
