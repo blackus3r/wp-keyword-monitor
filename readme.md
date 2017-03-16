@@ -37,7 +37,7 @@ All keywords can be found in a table.
 ![settings](assets-wp-repo/screenshot-3.png)
 These are the settings.
 
-##Donation
+## Donation
 You can donate to this project via PayPal by visiting this page: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28WZAXQDXYZ5A
 
 ## Changelog
