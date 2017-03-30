@@ -37,11 +37,13 @@ class RankChecker
 
         for ($i=1; $i<=$_searchDepth; $i++)
         {
+	        $start = ($i * 10) + 1 - 10;
+
             if ($found===false)
             {
                 $curl = curl_init();
                 $keyword  = urlencode($_keyword->keyword);
-                $url = "https://www.googleapis.com/customsearch/v1?key=$this->apiKey&cx=$this->cx&q=$keyword&filter=1&start=$i&num=10&alt=json";
+                $url = "https://www.googleapis.com/customsearch/v1?key=$this->apiKey&cx=$this->cx&q=$keyword&filter=1&start=$start&num=10&alt=json";
                 curl_setopt($curl, CURLOPT_TIMEOUT, 10);
                 curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 5);
                 curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
