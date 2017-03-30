@@ -159,7 +159,8 @@ class Statistics
                     {
                         $result = $keyword->getResultForDate($date);
                         if ($result) $positions[] = $result->rank;
-                        else $positions[] = 0;
+                        else if (count($positions)>1) $positions[] = $positions[count($positions)-1];
+			            else $positions[] = 0;
                     }
 
                     $range = 0 - 256;
@@ -195,12 +196,20 @@ class Statistics
 				jQuery(document).ready(function () {
                     var ctx = document.getElementById('keywordStatistics');
                     new Chart(ctx, {
+
                         type: 'line',
                         data: {
                             labels: " . (json_encode(($dates),JSON_HEX_QUOT)) . ",
                             datasets: ".json_encode(($ranks), JSON_HEX_QUOT)."
                         },
                         options: {
+
+                reverse: true, // will reverse the scale
+         
+  scaleOverride: true,
+  scaleSteps: 19,
+  scaleStepWidth: -1,
+  scaleStartValue: 20,
                             responsive: true,
                             display: true,
                             tooltip: true,
