@@ -42,6 +42,10 @@ You can donate to this project via PayPal by visiting this page: https://www.pay
 
 ## Changelog
 
+### 1.0.5
+* Fixed statistics page which does not show the correct rankings, if interval is greater than one.
+* Fixed a bug when searching in deep rankings over 10 results.
+
 ### 1.0.4
 * Fixed a bug in the rank checker, which always calculates a ranking with position '1'
 
